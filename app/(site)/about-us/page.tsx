@@ -1,17 +1,6 @@
 "use client";
-import {
-  Button,
-  Divider,
-  Grid,
-  Link,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Grid, Link, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
-import PersonIcon from "@mui/icons-material/Person";
-import RssFeedIcon from "@mui/icons-material/RssFeed";
-import WaterfallChartIcon from "@mui/icons-material/WaterfallChart";
 import maincard from "../../../public/about-us.svg";
 import Image from "next/image";
 

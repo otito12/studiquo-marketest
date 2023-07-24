@@ -1,43 +1,32 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import { Button, Icon, IconButton, Typography } from "@mui/material";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { useTheme } from "@mui/material/styles";
+import Image from "next/image";
 
 function DashWidLgNum({
   title,
+  description,
   width,
-  icon,
+  image,
   iconWidth,
-  onClick,
 }: {
   title: string;
+  description: string;
   width?: string;
   iconWidth?: number | string;
-  icon: any;
-  onClick: Function;
+  image: any;
 }) {
   const theme = useTheme();
   return (
     <Grid container justifyContent={"center"} padding={0.5}>
       <Grid
-        // disableElevation
-        // disableRipple
-        // onClick={() => onClick(false)}
         sx={{
           borderRadius: "8px",
           width: `${width ? width : "100%"}`,
-          // background: "white",
-          // border: "solid 1px #e8e8e8 !important",
           maxWidth: "400px",
-          ".MuiIcon-root": {
-            color: "#97FCB5 !important",
-          },
           background: "white",
-          border: "solid 2px #97FCB5 !important",
-          boxShadow: "1px 3px 12px #e2e2e2 !important",
+          border: "solid 1px #D9D9D9 !important",
           minWidth: "80px", //set same as div below to make work aspect work
           ":hover": {},
         }}
@@ -63,36 +52,71 @@ function DashWidLgNum({
           >
             <Grid
               container
-              justifyContent={"center"}
+              direction={"column"}
+              justifyContent={"start"}
               alignContent={"center"}
               sx={{
                 width: "100%",
                 height: "100%",
               }}
             >
-              <Grid item xs={12} sx={{ pb: 3 }}>
-                <Icon
-                  component={icon}
+              <Grid
+                item
+                flex={1}
+                sx={{
+                  pb: 3,
+                  background: "#f9f9f9",
+                  height: "200px",
+                  width: "100%",
+                  borderRadius: "8px",
+                }}
+              >
+                <Grid
+                  container
                   sx={{
-                    color: "#D9D9D9",
-                    height: `${iconWidth ? iconWidth + "px" : 50}px`,
-                    width: `${iconWidth ? iconWidth + "px" : 50}px`,
-                    alignContent: "center",
-                    justifyContent: "center",
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Typography
-                  align="center"
-                  sx={{
-                    color: "#373D5D",
-                    fontSize: "15px",
-                    fontWeight: "500",
+                    p: 1,
+                    height: "100%",
+                    borderRadius: "18px",
                   }}
                 >
-                  {title}
-                </Typography>
+                  <Image
+                    src={image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      position: "relative",
+                      objectFit: "contain",
+                      borderRadius: "8px",
+                    }}
+                    alt="none"
+                  />
+                </Grid>
+              </Grid>
+              <Grid item flex={1} sx={{ pl: 2, pr: 2 }}>
+                <Grid container justifyContent={"center"} pt={2} pb={2}>
+                  <Typography
+                    align="center"
+                    sx={{
+                      color: "black",
+                      fontSize: "25px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {title}
+                  </Typography>
+                </Grid>
+                <Grid container justifyContent={"center"}>
+                  <Typography
+                    align="center"
+                    sx={{
+                      color: "#717171",
+                      fontSize: "15px",
+                      fontWeight: "100",
+                    }}
+                  >
+                    {description}
+                  </Typography>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>

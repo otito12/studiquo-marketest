@@ -12,6 +12,9 @@ import MainPageCard from "./components/MainPageCard";
 import BoltIcon from "@mui/icons-material/Bolt";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import HomeCard from "./components/HomeCard";
+import teacherimg from "../../public/home/teachers.svg";
+import studentimg from "../../public/home/students.svg";
+import parentimg from "../../public/home/parent.svg";
 
 export default function page() {
   const theme = useTheme();
@@ -67,7 +70,7 @@ export default function page() {
                   <BoltIcon
                     sx={{
                       ml: "1",
-                      color: "#61EE8B",
+                      color: "#FDD023",
                       height: "50px",
                       width: "50px",
                     }}
@@ -147,15 +150,35 @@ export default function page() {
             </Typography>
           </Grid>
           <Grid container justifyContent={"center"} pt={10} pb={20}>
-            <Grid item xs={12} md={4} pb={2}>
-              <HomeCard title={""} icon={undefined} onClick={() => {}} />
+            <Grid item xs={12} lg={4} pb={2}>
+              <HomeCard
+                title={"Teachers"}
+                description={
+                  "We believe teachers are heart of educational institutions. \
+                  Empowering them with resources is critical to student learning"
+                }
+                image={teacherimg}
+              />
             </Grid>
-            <Grid item xs={12} md={4} pb={2}>
-              <HomeCard title={""} icon={undefined} onClick={() => {}} />
+            <Grid item xs={12} lg={4} pb={2}>
+              <HomeCard
+                title={"Schools"}
+                description={
+                  "Insights into student performance overtime drive exceptional testing results "
+                }
+                image={studentimg}
+              />
             </Grid>
 
-            <Grid item xs={12} md={4} pb={2}>
-              <HomeCard title={""} icon={undefined} onClick={() => {}} />
+            <Grid item xs={12} lg={4} pb={2}>
+              <HomeCard
+                title={"Parents"}
+                description={
+                  "Don’t wait for end of term results, know where \
+                  your child is struggling and outperforming the class in realtime! "
+                }
+                image={parentimg}
+              />
             </Grid>
           </Grid>
         </Grid>
@@ -167,15 +190,27 @@ export default function page() {
             </Typography>
           </Grid>
           <Grid container justifyContent={"center"} pt={10} pb={20}>
-            <Grid item xs={12} md={4} pb={2}>
-              <HomeCard title={""} icon={undefined} onClick={() => {}} />
+            <Grid item xs={12} lg={4} pb={2}>
+              <HomeCard
+                title={"Opensource Textbook"}
+                image={teacherimg}
+                description={""}
+              />
             </Grid>
-            <Grid item xs={12} md={4} pb={2}>
-              <HomeCard title={""} icon={undefined} onClick={() => {}} />
+            <Grid item xs={12} lg={4} pb={2}>
+              <HomeCard
+                title={"Teaching Resources"}
+                image={teacherimg}
+                description={""}
+              />
             </Grid>
 
-            <Grid item xs={12} md={4} pb={2}>
-              <HomeCard title={""} icon={undefined} onClick={() => {}} />
+            <Grid item xs={12} lg={4} pb={2}>
+              <HomeCard
+                title={"AI Testing"}
+                image={teacherimg}
+                description={""}
+              />
             </Grid>
           </Grid>
         </Grid>

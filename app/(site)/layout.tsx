@@ -4,20 +4,20 @@ import "../globals.css";
 import MainAppBar from "./components/MainAppBar";
 import Footer from "./components/footer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Rubik } from "next/font/google";
-const roboto = Rubik({
+import { Quicksand } from "next/font/google";
+const font = Quicksand({
   weight: "500",
   subsets: ["latin"],
 });
 
 const themer = createTheme({
-  typography: {
-    allVariants: {
-      fontFamily: `${roboto.style.fontFamily}`,
-      textTransform: "none",
-      fontSize: 16,
-    },
-  },
+  // typography: {
+  //   allVariants: {
+  //     fontFamily: `${font.style.fontFamily}`,
+  //     // textTransform: "none",
+  //     // fontSize: 16,
+  //   },
+  // },
 });
 
 export default function RootLayout({
