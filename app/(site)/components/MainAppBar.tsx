@@ -34,8 +34,8 @@ export default function MainAppBar({
           color: "black",
           zIndex: "1",
           p: 2,
-          pl: matchesBreakpoint ? 0 : 15,
-          pr: matchesBreakpoint ? 0 : 15,
+          pl: matchesBreakpoint ? 0 : 5,
+          pr: matchesBreakpoint ? 0 : 5,
           m: 0,
           boxShadow: elevation ? "1px 1px 3px #e1e1e1 !important" : "none",
         }}

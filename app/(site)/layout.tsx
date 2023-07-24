@@ -3,12 +3,22 @@ import { Button, Grid, useMediaQuery, useTheme } from "@mui/material";
 import "../globals.css";
 import MainAppBar from "./components/MainAppBar";
 import Footer from "./components/footer";
-// import type { Metadata } from "next";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Rubik } from "next/font/google";
+const roboto = Rubik({
+  weight: "500",
+  subsets: ["latin"],
+});
 
-// export const metadata: Metadata = {
-//   title: "Studiquo",
-//   description: "Studiquo Site",
-// };
+const themer = createTheme({
+  typography: {
+    allVariants: {
+      fontFamily: `${roboto.style.fontFamily}`,
+      textTransform: "none",
+      fontSize: 16,
+    },
+  },
+});
 
 export default function RootLayout({
   children,
@@ -20,31 +30,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Grid container justifyContent={"center"} alignContent={"center"}>
-          <Grid container sx={{ zIndex: 5 }}>
-            <MainAppBar />
-          </Grid>
-          <Grid
-            container
-            justifyContent={"center"}
-            sx={{ height: "100vh", width: "100vw" }}
-          >
+        <ThemeProvider theme={themer}>
+          <Grid container justifyContent={"center"} alignContent={"center"}>
+            <Grid container sx={{ zIndex: 5 }}>
+              <MainAppBar />
+            </Grid>
             <Grid
               container
               justifyContent={"center"}
-              sx={{
-                zIndex: 3,
-                pl: matchesBreakpoint ? 3 : 16,
-                pr: matchesBreakpoint ? 3 : 16,
-              }}
+              sx={{ height: "100vh", width: "100vw" }}
             >
-              {children}
-            </Grid>
-            <Grid container sx={{ zIndex: 1 }}>
-              <Footer />
+              <Grid container justifyContent={"center"}>
+                {children}
+              </Grid>
+              <Grid container sx={{ zIndex: 1 }}>
+                <Footer />
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </ThemeProvider>
       </body>
     </html>
   );

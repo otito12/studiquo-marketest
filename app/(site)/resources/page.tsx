@@ -31,7 +31,16 @@ export default function FundsPage() {
   const matchesBreakpoint = useMediaQuery(theme.breakpoints.down("lg"));
   const router = useRouter();
   return (
-    <Grid container direction={"column"} sx={{ hieght: "100%", pt: 9 }}>
+    <Grid
+      container
+      direction={"column"}
+      sx={{
+        hieght: "100%",
+        pt: 9,
+        pl: matchesBreakpoint ? 3 : 16,
+        pr: matchesBreakpoint ? 3 : 16,
+      }}
+    >
       <Grid container justifyContent={"center"}>
         <Grid container alignItems={"start"} justifyContent={"center"}>
           <Grid container>
