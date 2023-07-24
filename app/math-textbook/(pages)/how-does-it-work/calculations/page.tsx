@@ -2,7 +2,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-import examplecalc from "../../../../../public/examplecalc.png";
 export default function page() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     // first prevent the default behavior
@@ -59,16 +58,6 @@ export default function page() {
                   Quantity of XUSG Issued = USDC Deposited &divide; XUSG Price
                 </Typography>
               </li>
-              <Image
-                src={examplecalc}
-                style={{
-                  width: "300px",
-                  height: "200px",
-                  position: "relative",
-                  objectFit: "fill",
-                }}
-                alt="none"
-              />
               <li>
                 <Typography>
                   Quantity of USDC Redeemed = XUSG Quantity &times; XUSG Price
