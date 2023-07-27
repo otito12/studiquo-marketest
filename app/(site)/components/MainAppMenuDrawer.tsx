@@ -56,7 +56,10 @@ export default function DrawerAppBar({
         <Grid sx={{ textAlign: "center" }}>
           <Button
             disableRipple
-            onClick={() => router.push("/")}
+            onClick={() => {
+              handleDrawerToggle();
+              router.push("/");
+            }}
             sx={{
               color: "#1C1E21",
               textTransform: "none",
