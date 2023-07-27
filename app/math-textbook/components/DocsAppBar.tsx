@@ -64,9 +64,15 @@ export default function ButtonAppBar({
                 variant="body1"
                 component="div"
                 fontWeight={600}
-                sx={{ flexGrow: 1, pl: 2, fontSize: "16px" }}
+                sx={{ flexGrow: 1, pl: 2, fontSize: "20px" }}
               >
-                Studiquo | Grade 6 Maths
+                Studiquo
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ flexGrow: 1, pl: 1, fontSize: "16px" }}
+              >
+                | Grade 6 Maths
               </Typography>
             </Button>
           </Grid>
