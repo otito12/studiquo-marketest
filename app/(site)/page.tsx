@@ -140,7 +140,7 @@ export default function page() {
           <Grid container justifyContent={"center"}>
             <Typography
               textAlign={matchesBreakpoint ? "center" : "left"}
-              fontSize={"36px"}
+              fontSize={matchesBreakpoint ? "30px" : "38px"}
               fontWeight={"bold"}
             >
               Challenge the status quo
@@ -192,11 +192,14 @@ export default function page() {
 
         <Grid container justifyItems={"center"}>
           <Grid container justifyContent={"center"}>
-            <Typography fontSize={"36px"} fontWeight={"bold"}>
+            <Typography
+              fontSize={matchesBreakpoint ? "30px" : "38px"}
+              fontWeight={"bold"}
+            >
               Our features
             </Typography>
           </Grid>
-          <Grid container justifyContent={"center"} pt={10} pb={20}>
+          <Grid container justifyContent={"center"} pt={8} pb={20}>
             <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"Teaching Resources"}
