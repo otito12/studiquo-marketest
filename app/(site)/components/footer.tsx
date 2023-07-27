@@ -4,6 +4,7 @@ import {
   Divider,
   Grid,
   IconButton,
+  TextField,
   Typography,
   useMediaQuery,
   useTheme,
@@ -40,22 +41,49 @@ export default function footer() {
         <Grid container justifyContent={"space-between"}>
           <Grid item>
             <Grid container direction={"column"}>
-              <Typography
-                color={"white"}
-                fontSize={"20px"}
-                fontWeight={"bold"}
-                sx={{ pb: 2 }}
-              >
-                Disclaimer
-              </Typography>
-              <Grid item>
-                <Typography color={"white"}>
-                  All documents and contents of this website are created for the
-                  Stellar Development Foundation (SDF). The purpose of this
-                  website is to apply for an SDF grant and should not be
-                  construed as an offer of investment. Please review the "Legal
-                  Disclaimers and Disclosures section.
+              <Grid item xs={12}>
+                <Typography
+                  color={"white"}
+                  fontSize={"20px"}
+                  fontWeight={"bold"}
+                  sx={{ pb: 2 }}
+                >
+                  Studiquo
                 </Typography>
+              </Grid>
+
+              <Grid item>
+                <Typography color={"white"} fontSize={"17px"}>
+                  Don't forget to join our mailing list, we update and add
+                  resources every week!
+                </Typography>
+              </Grid>
+              <Grid container pt={3}>
+                <TextField
+                  id="outlined-basic"
+                  variant="outlined"
+                  sx={{
+                    background: "white",
+                    borderRadius: "8px",
+                    mr: 2,
+                  }}
+                />
+                <Button
+                  disableRipple
+                  sx={{
+                    pl: 3,
+                    pr: 3,
+                    borderRadius: "8px",
+                    background: "#97FCB5",
+                    color: "#263238 !important",
+                    textTransform: "none",
+                    ":hover": {
+                      background: "#97FCB5 !important",
+                    },
+                  }}
+                >
+                  Subscribe
+                </Button>
               </Grid>
             </Grid>
           </Grid>
