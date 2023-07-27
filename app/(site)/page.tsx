@@ -15,6 +15,9 @@ import HomeCard from "./components/HomeCard";
 import teacherimg from "../../public/home/teachers.svg";
 import studentimg from "../../public/home/students.svg";
 import parentimg from "../../public/home/parent.svg";
+import resourcesimg from "../../public/home/resources.svg";
+import aiimg from "../../public/home/ai.svg";
+import communityimg from "../../public/home/community.svg";
 
 export default function page() {
   const theme = useTheme();
@@ -39,14 +42,14 @@ export default function page() {
           alignSelf={"center"}
           justifySelf={"center"}
           sx={{ height: "85vh" }}
-          mt={matchesBreakpoint ? 10 : 0}
+          mt={matchesBreakpoint ? 15 : 0}
         >
           <Grid item md={12} lg={7}>
             <Grid container justifyItems={"center"}>
               <Grid item xs={12}>
                 <Typography
                   sx={{
-                    fontSize: matchesBreakpoint ? "55px" : "55px",
+                    fontSize: matchesBreakpoint ? "38px" : "55px",
                     fontWeight: "bold",
                     textAlign: `${matchesBreakpoint ? "center" : "left"}`,
                   }}
@@ -57,7 +60,7 @@ export default function page() {
               <Grid item xs={12}>
                 <Typography
                   sx={{
-                    fontSize: matchesBreakpoint ? "55px" : "55px",
+                    fontSize: matchesBreakpoint ? "38px" : "55px",
                     alignItems: "center",
                     alignContent: "center",
                     fontWeight: "bold",
@@ -71,8 +74,8 @@ export default function page() {
                     sx={{
                       ml: "1",
                       color: "#FDD023",
-                      height: "50px",
-                      width: "50px",
+                      height: matchesBreakpoint ? "30px" : "50px",
+                      width: matchesBreakpoint ? "30px" : "50px",
                     }}
                   />
                 </Typography>
@@ -86,7 +89,7 @@ export default function page() {
                     textAlign: `${matchesBreakpoint ? "center" : "left"}`,
                   }}
                 >
-                  We empower teachers with AI powered tools and resources to aid
+                  We empower teachers with AI tools and resources to aid
                   Learning
                 </Typography>
               </Grid>
@@ -120,13 +123,13 @@ export default function page() {
             </Grid>
           </Grid>
           <Grid item flex={1}></Grid>
-          <Grid item mt={4} xs={12} lg={4}>
+          <Grid item xs={12} lg={4}>
             <Grid
               container
               alignContent={"center"}
               justifyItems={"center"}
               p={3}
-              display={{ xs: "none", md: "flex", lg: "flex" }}
+              // display={{ xs: "flex", md: "flex", lg: "flex" }}
             >
               <MainPageCard />
             </Grid>
@@ -141,16 +144,16 @@ export default function page() {
           </Grid>
           <Grid container justifyContent={"center"}>
             <Typography
-              fontSize={"16px"}
+              fontSize={"17px"}
               color={"#717171"}
-              fontWeight={"bold"}
+              // fontWeight={"bold"}
               pt={1}
             >
               Who is Studiquo for?
             </Typography>
           </Grid>
           <Grid container justifyContent={"center"} pt={10} pb={20}>
-            <Grid item xs={12} lg={4} pb={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={2}>
               <HomeCard
                 title={"Teachers"}
                 description={
@@ -160,7 +163,7 @@ export default function page() {
                 image={teacherimg}
               />
             </Grid>
-            <Grid item xs={12} lg={4} pb={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={2}>
               <HomeCard
                 title={"Schools"}
                 description={
@@ -170,12 +173,12 @@ export default function page() {
               />
             </Grid>
 
-            <Grid item xs={12} lg={4} pb={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={2}>
               <HomeCard
                 title={"Parents"}
                 description={
                   "Don’t wait for end of term results, know where \
-                  your child is struggling and outperforming the class in realtime! "
+                  your child is struggling annd outperforming the class in realtime! "
                 }
                 image={parentimg}
               />
@@ -190,26 +193,31 @@ export default function page() {
             </Typography>
           </Grid>
           <Grid container justifyContent={"center"} pt={10} pb={20}>
-            <Grid item xs={12} lg={4} pb={2}>
-              <HomeCard
-                title={"Opensource Textbook"}
-                image={teacherimg}
-                description={""}
-              />
-            </Grid>
-            <Grid item xs={12} lg={4} pb={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={2}>
               <HomeCard
                 title={"Teaching Resources"}
-                image={teacherimg}
-                description={""}
+                image={resourcesimg}
+                description={
+                  "Unlock the power of knowledge with Open Source Teaching Resources"
+                }
               />
             </Grid>
-
-            <Grid item xs={12} lg={4} pb={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={2}>
               <HomeCard
-                title={"AI Testing"}
-                image={teacherimg}
-                description={""}
+                title={"AI Grading"}
+                image={aiimg}
+                description={
+                  "Effortlessly grade with precision, powered by AI technology"
+                }
+              />
+            </Grid>
+            <Grid item xs={12} lg={4} pb={2} pr={2}>
+              <HomeCard
+                title={"You"}
+                image={communityimg}
+                description={
+                  "Empowering innovation through collaboration: Join our community-based development revolution. We want to build something you love!"
+                }
               />
             </Grid>
           </Grid>
@@ -232,6 +240,24 @@ export default function page() {
           >
             Shape the new standard for teaching
           </Typography>
+          <Grid
+            item
+            xs={12}
+            pt={5}
+            pb={3}
+            sx={{
+              pl: matchesBreakpoint ? 3 : 16,
+              pr: matchesBreakpoint ? 3 : 16,
+            }}
+          >
+            <Typography textAlign={"center"} fontSize={"17px"}>
+              At Studiquo, we believe that education should be engaging,
+              accessible, and tailored to each individual's unique learning
+              style. Our mission is to provide cutting-edge technology solutions
+              that empower both teachers and students, enhancing the teaching
+              and learning experience in and out of the classroom.
+            </Typography>
+          </Grid>
         </Grid>
         <Grid container justifyContent={"center"}>
           <Button

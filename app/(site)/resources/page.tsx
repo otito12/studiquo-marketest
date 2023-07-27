@@ -46,18 +46,18 @@ export default function FundsPage() {
           <Grid container>
             <Grid container sx={{ width: "100%", mb: 10 }}>
               <Grid item xs={12} mt={3}>
-                <Typography fontWeight={"600"} fontSize={"38px"} pt={3}>
+                <Typography fontWeight={"600"} fontSize={"28px"} pt={5} pb={2}>
                   Free Resources
                 </Typography>
               </Grid>
               <Grid item xs={12} pb={3}>
-                <Typography fontSize={"20px"}>
+                <Typography fontSize={"17px"}>
                   Don't forget to join our mailing list, we update and add
                   resources every week!
                 </Typography>
               </Grid>
 
-              <Grid container pt={2}>
+              <Grid container>
                 <SectionAccordion title={"Grade 6"}>
                   <StyledInnerGrid justifyItems={"center"}>
                     <Grid container>

@@ -8,7 +8,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 export default function MainPageCard() {
   const router = useRouter();
   const theme = useTheme();
-  const matchesBreakpoint = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesBreakpoint = useMediaQuery(theme.breakpoints.down("lg"));
   return (
     <Grid
       container

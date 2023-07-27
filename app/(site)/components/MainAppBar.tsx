@@ -19,6 +19,7 @@ export default function MainAppBar({
 }) {
   const theme = useTheme();
   const matchesBreakpoint = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesBreakpointMd = useMediaQuery(theme.breakpoints.down("lg"));
   const router = useRouter();
   const path = usePathname().split("/")[1];
   console.log(path);
@@ -87,14 +88,8 @@ export default function MainAppBar({
 
           <Grid
             item
-            flex={1}
-            display={{ xs: "none", md: "flex", lg: "flex" }}
-          ></Grid>
-
-          <Grid
-            item
             flex={2}
-            alignItems={"center"}
+            pl={matchesBreakpointMd ? 5 : 30}
             display={{ xs: "none", md: "flex", lg: "flex" }}
           >
             <Grid
@@ -146,11 +141,7 @@ export default function MainAppBar({
             </Grid>
           </Grid>
 
-          <Grid
-            item
-            flex={1}
-            display={{ xs: "none", md: "flex", lg: "flex" }}
-          ></Grid>
+          <Grid item display={{ xs: "none", md: "flex", lg: "flex" }}></Grid>
           <Grid display={{ xs: "none", md: "flex", lg: "flex" }}>
             <Button
               disableRipple

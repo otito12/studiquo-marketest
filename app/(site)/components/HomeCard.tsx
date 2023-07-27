@@ -22,7 +22,7 @@ function DashWidLgNum({
     <Grid container justifyContent={"center"} padding={0.5}>
       <Grid
         sx={{
-          borderRadius: "8px",
+          borderRadius: "20px",
           width: `${width ? width : "100%"}`,
           maxWidth: "400px",
           background: "white",
@@ -64,8 +64,7 @@ function DashWidLgNum({
                 item
                 flex={1}
                 sx={{
-                  pb: 3,
-                  background: "#f9f9f9",
+                  p: 2,
                   height: "200px",
                   width: "100%",
                   borderRadius: "8px",
@@ -75,6 +74,7 @@ function DashWidLgNum({
                   container
                   sx={{
                     p: 1,
+                    background: "#f9f9f9",
                     height: "100%",
                     borderRadius: "18px",
                   }}
@@ -93,7 +93,7 @@ function DashWidLgNum({
                 </Grid>
               </Grid>
               <Grid item flex={1} sx={{ pl: 2, pr: 2 }}>
-                <Grid container justifyContent={"center"} pt={2} pb={2}>
+                <Grid container justifyContent={"center"} pb={2}>
                   <Typography
                     align="center"
                     sx={{
