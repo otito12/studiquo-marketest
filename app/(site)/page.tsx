@@ -129,7 +129,7 @@ export default function page() {
               alignContent={"center"}
               justifyItems={"center"}
               p={3}
-              // display={{ xs: "flex", md: "flex", lg: "flex" }}
+              display={{ xs: "none", md: "flex", lg: "flex" }}
             >
               <MainPageCard />
             </Grid>
@@ -138,7 +138,11 @@ export default function page() {
 
         <Grid container justifyItems={"center"}>
           <Grid container justifyContent={"center"}>
-            <Typography fontSize={"36px"} fontWeight={"bold"}>
+            <Typography
+              textAlign={matchesBreakpoint ? "center" : "left"}
+              fontSize={"36px"}
+              fontWeight={"bold"}
+            >
               Challenge the status quo
             </Typography>
           </Grid>
@@ -153,7 +157,7 @@ export default function page() {
             </Typography>
           </Grid>
           <Grid container justifyContent={"center"} pt={10} pb={20}>
-            <Grid item xs={12} lg={4} pb={2} pr={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"Teachers"}
                 description={
@@ -163,7 +167,7 @@ export default function page() {
                 image={teacherimg}
               />
             </Grid>
-            <Grid item xs={12} lg={4} pb={2} pr={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"Schools"}
                 description={
@@ -173,7 +177,7 @@ export default function page() {
               />
             </Grid>
 
-            <Grid item xs={12} lg={4} pb={2} pr={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"Parents"}
                 description={
@@ -193,7 +197,7 @@ export default function page() {
             </Typography>
           </Grid>
           <Grid container justifyContent={"center"} pt={10} pb={20}>
-            <Grid item xs={12} lg={4} pb={2} pr={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"Teaching Resources"}
                 image={resourcesimg}
@@ -202,7 +206,7 @@ export default function page() {
                 }
               />
             </Grid>
-            <Grid item xs={12} lg={4} pb={2} pr={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"AI Grading"}
                 image={aiimg}
@@ -211,7 +215,7 @@ export default function page() {
                 }
               />
             </Grid>
-            <Grid item xs={12} lg={4} pb={2} pr={2}>
+            <Grid item xs={12} lg={4} pb={2} pr={matchesBreakpoint ? 0 : 2}>
               <HomeCard
                 title={"You"}
                 image={communityimg}
