@@ -51,7 +51,7 @@ export default function page() {
                   sx={{
                     fontSize: matchesBreakpoint ? "38px" : "55px",
                     fontWeight: "bold",
-                    textAlign: `${matchesBreakpoint ? "center" : "left"}`,
+                    textAlign: `${matchesBreakpoint ? "left" : "left"}`,
                   }}
                 >
                   A teaching standard
@@ -65,7 +65,7 @@ export default function page() {
                     alignContent: "center",
                     fontWeight: "bold",
                     color: "#61EE8B",
-                    textAlign: `${matchesBreakpoint ? "center" : "left"}`,
+                    textAlign: `${matchesBreakpoint ? "left" : "left"}`,
                     mr: 1,
                   }}
                 >
@@ -86,7 +86,7 @@ export default function page() {
                   sx={{
                     mt: 4,
                     fontSize: "20px",
-                    textAlign: `${matchesBreakpoint ? "center" : "left"}`,
+                    textAlign: `${matchesBreakpoint ? "left" : "left"}`,
                   }}
                 >
                   We empower teachers with AI tools and resources to aid
@@ -97,7 +97,7 @@ export default function page() {
               <Grid
                 container
                 alignItems={"center"}
-                justifyContent={matchesBreakpoint ? "center" : "left"}
+                justifyContent={matchesBreakpoint ? "left" : "left"}
               >
                 <Button
                   disableRipple
