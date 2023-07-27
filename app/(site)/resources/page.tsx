@@ -20,7 +20,7 @@ import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
 import { useRouter } from "next/navigation";
 
 const StyledInnerGrid = styled(Grid)(({ theme }) => ({
-  padding: "2rem",
+  padding: "1rem",
   background: "#F9F9F9",
   borderBottomLeftRadius: "8px",
   borderBottomRightRadius: "8px",
@@ -61,7 +61,7 @@ export default function FundsPage() {
                 <SectionAccordion title={"Grade 6"}>
                   <StyledInnerGrid justifyItems={"center"}>
                     <Grid container>
-                      <Grid item md={2}>
+                      <Grid item>
                         <ResourceCard
                           onClick={() => {
                             router.push("/math-textbook");
@@ -70,14 +70,14 @@ export default function FundsPage() {
                           icon={CalculateIcon}
                         />
                       </Grid>
-                      {/* <Grid item md={2}>
+                      {/* <Grid item pl={1}>
                         <ResourceCard
                           onClick={() => {}}
                           title="Grade 6 English"
                           icon={AddToPhotosIcon}
                         />
                       </Grid>
-                      <Grid item md={2}>
+                      <Grid item pl={1}>
                         <ResourceCard
                           onClick={() => {}}
                           title="Grade 6 Science"

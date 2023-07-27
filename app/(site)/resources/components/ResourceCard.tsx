@@ -32,7 +32,7 @@ function DashWidLgNum({
           background: "white",
           border: "solid 1px #e8e8e8 !important",
           maxWidth: "250px",
-          minWidth: "80px", //set same as div below to make work aspect work
+          minWidth: "200px", //set same as div below to make work aspect work
           ":hover": {
             ".MuiIcon-root": {
               color: "#97FCB5 !important",
@@ -48,7 +48,7 @@ function DashWidLgNum({
           style={{
             width: "100%",
             maxWidth: "250px",
-            minWidth: "80px", //set same as Car above to make work aspect work
+            minWidth: "200px", //set same as Car above to make work aspect work
             aspectRatio: 1 / 1,
           }}
         >
