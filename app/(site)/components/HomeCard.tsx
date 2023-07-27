@@ -73,7 +73,6 @@ function DashWidLgNum({
                 sx={{
                   p: 1,
                   background: "#f9f9f9",
-                  height: "100%",
                   height: "200px",
                   borderRadius: "18px",
                 }}
