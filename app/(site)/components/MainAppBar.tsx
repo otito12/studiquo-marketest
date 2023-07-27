@@ -11,12 +11,19 @@ import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
+import MainAppMenuDrawer from "./MainAppMenuDrawer";
 
 export default function MainAppBar({
   elevation = false,
 }: {
   elevation?: boolean;
 }) {
+  const navItems = [
+    { label: "Home", link: "/" },
+    { label: "About us", link: "/about-us" },
+    { label: "Free resources", link: "/resources" },
+  ];
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const matchesBreakpoint = useMediaQuery(theme.breakpoints.down("md"));
   const matchesBreakpointMd = useMediaQuery(theme.breakpoints.down("lg"));
@@ -41,6 +48,11 @@ export default function MainAppBar({
           boxShadow: elevation ? "1px 1px 3px #e1e1e1 !important" : "none",
         }}
       >
+        <MainAppMenuDrawer
+          navItems={navItems}
+          open={drawerOpen}
+          setOpen={setDrawerOpen}
+        />
         <Grid
           container
           sx={{ height: "100%" }}
@@ -48,7 +60,12 @@ export default function MainAppBar({
           alignItems={"center"}
         >
           <Grid item pl={2} display={{ xs: "flex", md: "none", lg: "none" }}>
-            <IconButton sx={{ hieght: "40px", width: "40px" }}>
+            <IconButton
+              onClick={() => {
+                setDrawerOpen(true);
+              }}
+              sx={{ hieght: "40px", width: "40px" }}
+            >
               <MenuIcon />
             </IconButton>
           </Grid>
@@ -107,37 +124,19 @@ export default function MainAppBar({
                 },
               }}
             >
-              <Button
-                disableRipple
-                sx={{
-                  color: `${path === "" ? "#66d988" : "black"} !important`,
-                }}
-                onClick={() => router.push("/")}
-              >
-                Home
-              </Button>
-              <Button
-                disableRipple
-                sx={{
-                  color: `${
-                    path === "about-us" ? "#66d988" : "black"
-                  } !important`,
-                }}
-                onClick={() => router.push("/about-us")}
-              >
-                About us
-              </Button>
-              <Button
-                disableRipple
-                sx={{
-                  color: `${
-                    path === "resources" ? "#66d988" : "black"
-                  } !important`,
-                }}
-                onClick={() => router.push("/resources")}
-              >
-                Free Resources
-              </Button>
+              {navItems.map((item) => (
+                <Button
+                  disableRipple
+                  sx={{
+                    color: `${
+                      path === `${item.link.slice(1)}` ? "#66d988" : "black"
+                    } !important`,
+                  }}
+                  onClick={() => router.push(`${item.link}`)}
+                >
+                  {item.label}
+                </Button>
+              ))}
             </Grid>
           </Grid>
 
